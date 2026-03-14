@@ -1,0 +1,16 @@
+=== GARAGENTOR PROTOKOLL ===
+Start: 14.03.2026 08:54:32
+================================
+
+[08:54:32] Programm gestartet - Garagentor System aktiviert
+[08:54:36] Korrekter Code eingegeben - Zugang gewährt
+[08:54:38] Einfahrt freigegeben - warte auf Auto
+[08:54:39] Auto erkannt - Tor wird geöffnet
+[08:54:39] Tor öffnet sich...
+[08:54:47] Tor offen - Auto fährt ein
+[08:54:50] Tor schließt sich...
+[08:54:55] Tor geschlossen
+[08:54:56] Benutzer beendet Programm aus GATE_CLOSED-Zustand
+
+================================
+Ende: 14.03.2026 08:54:56
