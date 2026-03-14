@@ -1,37 +1,17 @@
 === GARAGENTOR PROTOKOLL ===
-Start: 14.03.2026 09:42:31
+Start: 14.03.2026 09:51:38
 ================================
 
-[09:42:31] Programm gestartet - Garagentor System aktiviert
-[09:42:33] Korrekter Code eingegeben - Zugang gewährt
-[09:42:36] Einfahrt freigegeben - warte auf Auto
-[09:42:50] Auto erkannt - Tor wird geöffnet
-[09:42:50] Tor öffnet sich...
-[09:42:58] Tor offen - Auto fährt ein
-[09:42:58] *** EINFAHRT erfasst: 14.03.2026 09:42:58 ***
-[09:43:08] Countdown abgelaufen - Tor schliesst automatisch
-[09:43:13] Tor geschlossen
-[09:43:20] Ausfahrt ausgelöst - Tor öffnet für Ausfahrt
-[09:43:20] Tor öffnet sich für Ausfahrt...
-[09:43:28] Tor offen - Auto fährt aus
-[09:43:28] *** AUSFAHRT erfasst: 14.03.2026 09:43:28 ***
-[09:43:39] Countdown abgelaufen - Tor schliesst automatisch nach Ausfahrt
-[09:43:44] Tor geschlossen
-[09:44:01] Zurück zu Wartezustand - Einfahrt frei
-[09:44:06] Auto erkannt - Tor wird geöffnet
-[09:44:06] Tor öffnet sich...
-[09:44:14] Tor offen - Auto fährt ein
-[09:44:14] *** EINFAHRT erfasst: 14.03.2026 09:44:14 ***
-[09:44:24] Countdown abgelaufen - Tor schliesst automatisch
-[09:44:29] Tor geschlossen
-[09:44:33] Zurück zu Wartezustand - Einfahrt frei
-[09:44:40] Auto erkannt - Tor wird geöffnet
-[09:44:40] Tor öffnet sich...
-[09:44:48] Tor offen - Auto fährt ein
-[09:44:48] *** EINFAHRT erfasst: 14.03.2026 09:44:48 ***
-[09:44:59] Countdown abgelaufen - Tor schliesst automatisch
-[09:45:04] Tor geschlossen
-[09:45:11] Benutzer beendet Programm aus GATE_CLOSED-Zustand
+[09:51:38] Programm gestartet - Garagentor System aktiviert
+[09:51:42] Korrekter Code eingegeben - Zugang gewährt
+[09:51:43] Einfahrt freigegeben - warte auf Auto
+[09:51:44] Auto erkannt - Tor wird geöffnet
+[09:51:44] Tor öffnet sich...
+[09:51:52] Tor offen - Auto fährt ein
+[09:51:52] *** EINFAHRT erfasst: 14.03.2026 09:51:52 ***
+[09:52:02] Countdown abgelaufen - Tor schliesst automatisch
+[09:52:07] Tor geschlossen
+[10:01:21] Benutzer beendet Programm aus GATE_CLOSED-Zustand
 
 ================================
-Ende: 14.03.2026 09:45:11
+Ende: 14.03.2026 10:01:21

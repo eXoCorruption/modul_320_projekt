@@ -11,9 +11,10 @@ class Main {
     }
 
     /**
-     * Wartet auf Benutzereingabe, schliesst aber automatisch nach 'seconds' Sekunden.
+     * Wartet auf Benutzereingabe, schliesst aber automatisch nach 10 Sekunden.
      * Gibt die Eingabe zurück, oder null bei Timeout.
      */
+    
     private static String waitForInputOrCountdown(Scanner scanner, int seconds) throws InterruptedException {
         for (int i = seconds; i > 0; i--) {
             System.out.print("\rTor schliesst automatisch in " + i + "s  (3 = jetzt, q = Beenden): ");
