@@ -39,7 +39,6 @@ class Main {
                     } else {
                         logger.log("Falscher Code eingegeben");
                         ui.showMessage("FALSCHER CODE", "Bitte erneut versuchen.");
-                        Thread.sleep(1000);
                     }
                     break;
                 }
@@ -60,6 +59,7 @@ class Main {
                 case WAITING_FOR_CAR: {
                     ui.showGarageStatus(state, "GRUEN");
                     System.out.println("Eingabe: 1 = Auto erkannt, q = Beenden");
+
                     String input = scanner.nextLine().trim();
                     if (isQuitCommand(input)) {
                         logger.log("Benutzer beendet Programm aus WAITING_FOR_CAR-Zustand");
@@ -76,6 +76,7 @@ class Main {
                     logger.log("Tor öffnet sich...");
                     Thread.sleep(8000);
                     logger.log("Tor offen - Auto fährt ein");
+                    logger.logEinfahrt();
                     state = GarageState.GATE_OPEN;
                     break;
                 }
@@ -104,7 +105,7 @@ class Main {
 
                 case GATE_CLOSED: {
                     ui.showGarageStatus(state, "ROT");
-                    System.out.println("Eingabe: 4 = zurück zu WARTEN, q = Beenden");
+                    System.out.println("Eingabe: 4 = neue Einfahrt, 5 = Ausfahrt, q = Beenden");
                     String input = scanner.nextLine().trim();
                     if (isQuitCommand(input)) {
                         logger.log("Benutzer beendet Programm aus GATE_CLOSED-Zustand");
@@ -112,6 +113,33 @@ class Main {
                     } else if (input.equals("4")) {
                         logger.log("Zurück zu Wartezustand - Einfahrt frei");
                         state = GarageState.WAITING_FOR_CAR;
+                    } else if (input.equals("5")) {
+                        logger.log("Ausfahrt ausgelöst - Tor öffnet für Ausfahrt");
+                        state = GarageState.AUSFAHRT_GATE_OPENING;
+                    }
+                    break;
+                }
+
+                case AUSFAHRT_GATE_OPENING: {
+                    ui.showGarageStatus(state, "ROT");
+                    logger.log("Tor öffnet sich für Ausfahrt...");
+                    Thread.sleep(8000);
+                    logger.log("Tor offen - Auto fährt aus");
+                    logger.logAusfahrt();
+                    state = GarageState.AUSFAHRT_GATE_OPEN;
+                    break;
+                }
+
+                case AUSFAHRT_GATE_OPEN: {
+                    ui.showGarageStatus(state, "GRUEN");
+                    System.out.println("Eingabe: 3 = Tor schließen, q = Beenden");
+                    String input = scanner.nextLine().trim();
+                    if (isQuitCommand(input)) {
+                        logger.log("Benutzer beendet Programm aus AUSFAHRT_GATE_OPEN-Zustand");
+                        running = false;
+                    } else if (input.equals("3")) {
+                        logger.log("Tor schließt sich nach Ausfahrt...");
+                        state = GarageState.GATE_CLOSING;
                     }
                     break;
                 }
