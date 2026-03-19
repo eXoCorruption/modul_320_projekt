@@ -39,7 +39,7 @@ class Main {
         Scanner scanner = new Scanner(System.in);
         GarageLogger logger = new GarageLogger();
 
-        GarageState state = GarageState.INIT;
+        String state = GarageState.INIT;
 
         boolean running = true;
         
@@ -50,7 +50,7 @@ class Main {
 
                 switch (state) {
 
-                case INIT: {
+                case GarageState.INIT: {
                     ui.showMessage("Schlüssel erforderlich",
                             "Bitte Code eingeben (oder q zum Beenden):");
 
@@ -68,7 +68,7 @@ class Main {
                     break;
                 }
 
-                case UNLOCKED: {
+                case GarageState.UNLOCKED: {
                     ui.showMessage("Zugang erlaubt", "Enter zum Starten, q zum Beenden.");
                     String input = scanner.nextLine().trim();
                     if (isQuitCommand(input)) {
@@ -81,7 +81,7 @@ class Main {
                     break;
                 }
 
-                case WAITING_FOR_CAR: {
+                case GarageState.WAITING_FOR_CAR: {
                     ui.showGarageStatus(state, "GRUEN");
                     System.out.println("Eingabe: 1 = Auto erkannt, q = Beenden");
 
@@ -96,7 +96,7 @@ class Main {
                     break;
                 }
 
-                case CAR_DETECTED: {
+                case GarageState.CAR_DETECTED: {
                     ui.showGarageStatus(state, "ROT");
                     logger.log("Tor öffnet sich...");
                     Thread.sleep(8000);
@@ -106,7 +106,7 @@ class Main {
                     break;
                 }
 
-                case GATE_OPEN: {
+                case GarageState.GATE_OPEN: {
                     ui.showGarageStatus(state, "GRUEN");
                     String input = waitForInputOrCountdown(scanner, AUTO_CLOSE_SECONDS);
                     if (isQuitCommand(input)) {
@@ -123,7 +123,7 @@ class Main {
                     break;
                 }
 
-                case GATE_CLOSING: {
+                case GarageState.GATE_CLOSING: {
                     ui.showGarageStatus(state, "ROT");
                     Thread.sleep(5000);
                     logger.log("Tor geschlossen");
@@ -131,7 +131,7 @@ class Main {
                     break;
                 }
 
-                case GATE_CLOSED: {
+                case GarageState.GATE_CLOSED: {
                     ui.showGarageStatus(state, "ROT");
                     System.out.println("Eingabe: 4 = neue Einfahrt, 5 = Ausfahrt, q = Beenden");
                     String input = scanner.nextLine().trim();
@@ -148,7 +148,7 @@ class Main {
                     break;
                 }
 
-                case AUSFAHRT_GATE_OPENING: {
+                case GarageState.AUSFAHRT_GATE_OPENING: {
                     ui.showGarageStatus(state, "ROT");
                     logger.log("Tor öffnet sich für Ausfahrt...");
                     Thread.sleep(8000);
@@ -158,7 +158,7 @@ class Main {
                     break;
                 }
 
-                case AUSFAHRT_GATE_OPEN: {
+                case GarageState.AUSFAHRT_GATE_OPEN: {
                     ui.showGarageStatus(state, "GRUEN");
                     String input = waitForInputOrCountdown(scanner, AUTO_CLOSE_SECONDS);
                     if (isQuitCommand(input)) {

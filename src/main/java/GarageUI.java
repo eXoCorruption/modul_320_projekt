@@ -9,7 +9,7 @@ public class GarageUI {
         System.out.println(msg);
     }
 
-    public void showGarageStatus(GarageState state, String ampel) {
+    public void showGarageStatus(String state, String ampel) {
         System.out.println();
         System.out.println("GARAGENEINFAHRT TERMINAL");
         System.out.println("========================");
