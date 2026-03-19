@@ -30,7 +30,7 @@ class Main {
             }
         }
         System.out.println();
-        return null; // Timeout - automatisch schliessen
+        return null; // Timeout, schliesst automatisch
     }
 
     public static void main(String[] args) throws Exception {
