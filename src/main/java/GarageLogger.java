@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter;
 
 public class GarageLogger {
     
-    private static final String LOG_FILE            = "garage_protocol.txt";
-    private static final String EIN_AUSFAHRT_FILE   = "einausfahrt_protocol.txt";
+    private static final String LOG_FILE            = "./protocol/garage_protocol.txt";
+    private static final String EIN_AUSFAHRT_FILE   = "./protocol/einausfahrt_protocol.txt";
     private static final DateTimeFormatter TIME_FORMAT     = DateTimeFormatter.ofPattern("HH:mm:ss");
     private static final DateTimeFormatter DATE_TIME_FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
