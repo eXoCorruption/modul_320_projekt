@@ -1,20 +1,15 @@
-<<<<<<< HEAD
 === GARAGENTOR PROTOKOLL ===
-Start: 14.03.2026 13:59:22
+Start: 20.03.2026 16:57:20
 ================================
 
-[13:59:22] Programm gestartet - Garagentor System aktiviert
-[13:59:25] Korrekter Code eingegeben - Zugang gewährt
-[13:59:27] Einfahrt freigegeben - warte auf Auto
-[13:59:30] Auto erkannt - Tor wird geöffnet
-[13:59:30] Tor öffnet sich...
-[13:59:38] Tor offen - Auto fährt ein
-[13:59:38] *** EINFAHRT erfasst: 14.03.2026 13:59:38 ***
-[13:59:44] Tor schliesst sich...
-[13:59:49] Tor geschlossen
-[13:59:56] Benutzer beendet Programm aus GATE_CLOSED-Zustand
+[16:57:20] Programm gestartet - Garagentor System aktiviert
+[16:57:25] Korrekter Code eingegeben - Zugang gewährt
+[16:57:26] Einfahrt freigegeben - warte auf Auto
+[16:57:27] Auto erkannt - Tor wird geöffnet
+[16:57:27] Tor öffnet sich...
+[16:57:35] Tor offen - Auto fährt ein
+[16:57:35] *** EINFAHRT erfasst: 20.03.2026 16:57:35 ***
+[16:57:38] Benutzer beendet Programm aus GATE_OPEN-Zustand
 
 ================================
-Ende: 14.03.2026 13:59:56
-=======
->>>>>>> aa69a5a0462672651f46332ff6b6336e20633c5c
+Ende: 20.03.2026 16:57:38
